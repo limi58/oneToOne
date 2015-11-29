@@ -3,21 +3,21 @@ a component make two select linked
 将2个 `select` 组件联动  
 
 # Usage
-1. 将2个 `select` 组件放在一个 `id` 为 `oneToOneWrap` 的 `div` 里。第一个 `select` 加上属性 `data-primary='true'` ，2个 `select` 都要加上 `data-name` 属性，值自己定义。如下：
-````
+1.将2个 `select` 组件放在一个 `id` 为 `oneToOneWrap` 的 `div` 里。第一个 `select` 加上属性 `data-primary='true'` ，2个 `select` 都要加上 `data-name` 属性，值自己定义。如下：
+```html
 <div id="oneToOneWrap">
     <select data-primary='true' data-name='name'></select>
     <select data-name='cities'></select>
 </div>
 ````
 
-2. 引入 oneToOne.js，如下：
-````
+2.引入 oneToOne.js，如下：
+```html
 <script type="text/javascript" src='../dist/oneToOne.js'></script>
 ````
 
-3. 启动，如下：
-````
+3.启动，如下：
+```js
 oneToOne({
     data: [
         {name: 'beijign', cities: ['bj1', 'bj2']}, 
