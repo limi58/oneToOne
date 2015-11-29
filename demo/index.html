@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>oneToOne demo</title>
+</head>
+<body>
+
+    <div id="oneToOneWrap">
+        <select data-primary='true' data-name='name'></select>
+        <select data-name='cities'></select>
+    </div>
+
+
+    <script type="text/javascript" src='../dist/oneToOne.js'></script>
+    <script type="text/javascript" src='chinaData.js'></script>
+    <script type="text/javascript">
+        oneToOne({data: chinaData()})
+    </script>
+</body>
+</html>
