@@ -1,4 +1,4 @@
-# oneToOne
+# select-to-select
 a component make two select linked  
 将2个 `select` 组件联动的 js 组件
 
