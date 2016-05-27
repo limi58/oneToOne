@@ -1,11 +1,12 @@
 function oneToOne(config){
     
-    document.addEventListener('DOMContentLoaded', main)
+    window.addEventListener('DOMContentLoaded', main)
 
     function main(){
 
         // render primary and sub select 
-        getPrimarySelect().innerHTML = getOptionsByArray(getValuesByKey(config.data, getPrimarySelect().getAttribute('data-name')))
+        const values = getValuesByKey(config.data, getPrimarySelect().getAttribute('data-name'))
+        getPrimarySelect().innerHTML = getOptionsByArray(values)
         getSubSelect().innerHTML = getOptionsByArray(config.data[0][getSubSelect().getAttribute('data-name')])
 
         // handle change primary select
@@ -21,11 +22,11 @@ function oneToOne(config){
     }
 
     function getPrimarySelect(){
-        return S('#oneToOneWrap>[data-primary="true"]')
+        return S('#oneToOneWrap [data-primary="true"]')
     }
 
     function getSubSelect(){
-        return S('#oneToOneWrap>select:not([data-primary="true"])')
+        return S('#oneToOneWrap select:not([data-primary="true"])')
     }
 
     function S(selector){
@@ -33,7 +34,7 @@ function oneToOne(config){
     }
 
     function getArrayByEqual(array, key, value, subKey){
-        for(var i in array){
+        for(let i in array){
             if(array[i][key] === value){
                 return array[i][subKey]
                 break
@@ -42,8 +43,8 @@ function oneToOne(config){
     }
 
     function getValuesByKey(array, key, i){
-        var returnArr = []
-        for(var i in array){
+        const returnArr = []
+        for(let i in array){
             returnArr.push(array[i][key])
         }
         return returnArr
@@ -54,16 +55,14 @@ function oneToOne(config){
      * return: string 
      */
     function getOptionsByArray(array){
-        var options = ''
-        for(var i in array){
+        let options = ''
+        for(let i in array){
             options += renderOptionTpl(array[i])
         }
         return options
     }
 
     function renderOptionTpl(value){
-        return '<option value="' + value + '">' + value + '</option>'
+        return `<option value='${value}'>${value}</option>`
     }
 }
-
-module.exports = oneToOne

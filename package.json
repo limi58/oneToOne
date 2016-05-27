@@ -1,0 +1,22 @@
+{
+  "name": "select-to-select",
+  "version": "1.0.0",
+  "description": "a component make two select linked  \r 将2个 `select` 组件联动的 js 组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limi58/select-to-select.git"
+  },
+  "author": "limi58",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/limi58/select-to-select/issues"
+  },
+  "homepage": "https://github.com/limi58/select-to-select#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0"
+  }
+}

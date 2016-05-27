@@ -13,7 +13,7 @@ a component make two select linked
 
 2.引入 oneToOne.js，如下：
 ```html
-<script type="text/javascript" src='../dist/oneToOne.js'></script>
+<script type="text/javascript" src='../dist/select-to-select.js'></script>
 ````
 
 3.启动，如下：
