@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>oneToOne demo</title>
+  <meta charset="utf-8" />
+  <title>STS demo</title>
 </head>
 <body>
 
-    <div id="oneToOneWrap">
-        <select data-primary='true' data-name='name'></select>
-        <select data-name='cities'></select>
-    </div>
+  <div id="sts_wrap">
+    <select data-primary='true' data-key='name'></select>
+    <select data-key='cities'></select>
+  </div>
 
 
-    <script type="text/javascript" src='../dist/oneToOne.js'></script>
-    <script type="text/javascript" src='chinaData.js'></script>
-    <script type="text/javascript">
-        oneToOne({data: chinaData()})
-    </script>
+  <script type="text/javascript" src='../dist/sts.js'></script>
+  <script type="text/javascript" src='chinaData.js'></script>
+  <script type="text/javascript">
+    STS(chinaData())
+  </script>
 </body>
 </html>
